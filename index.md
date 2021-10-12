@@ -3,7 +3,11 @@
 
 # How to use Franklin
 
+<!-- 
+
 \tableofcontents <!-- you can use \toc as well -->
+
+<!-- 
 
 This section is meant as a refresher if you're new to Franklin.
 Have a look at both how the website renders and the corresponding markdown (`index.md`).
@@ -16,6 +20,8 @@ Ps: if you want to modify the header or footer or the general look of the websit
 ## The base with Markdown
 
 The [standard markdown syntax](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be used such as titles using `#`, lists:
+
+
 
 * element with **bold**
 * element with _emph_
@@ -102,6 +108,8 @@ In a similar vein you can cite references that would be at the bottom of the pag
 
 \newcommand{\bolditalic}[1]{_**!#1**_} <!--_ ignore this comment, it helps atom to not get confused by the trailing underscore when highlighting the code but is not necessary.-->
 
+<!-- 
+
 and use it \bolditalic{here for example}.
 
 Here's another quick one, a command to change the color:
@@ -109,6 +117,8 @@ Here's another quick one, a command to change the color:
 \newcommand{\col}[2]{~~~<span style="color:#1">#2</span>~~~}
 
 This is \col{blue}{in blue} or \col{#bf37bc}{in #bf37bc}.
+
+<!-- 
 
 ### A quick note on whitespaces
 
@@ -130,6 +140,8 @@ You can include raw HTML by just surrounding a block with `~~~`.
 Not much more to add.
 This may be useful for local custom layouts like having a photo next to a text in a specific way.
 
+
+
 ~~~
 <div class="row">
   <div class="container">
@@ -145,6 +157,8 @@ This may be useful for local custom layouts like having a photo next to a text i
 </div>
 ~~~
 
+
+
 **Note 1**: again, entire such blocks can be made into latex-like commands via `\newcommand{\mynewblock}[1]{...}`.
 
 **Note 2**: whatever is in a raw HTML block is *not* further processed (so you can't have LaTeX in there for instance). A partial way around this is to use `@@...` blocks which *will* be recursively parsed. The following code gives the same result as above with the small difference that there is LaTeX being processed in the inner div.
@@ -159,6 +173,8 @@ Marine iguanas are **truly splendid** creatures. They're not found in equations 
 ~~~
 @@
 
+
+
 ## Pages and structure
 
 Here are a few empty pages connecting to the menu links to show where files can go and the resulting paths. (It's probably best if you look at the source folder for this).
@@ -167,10 +183,14 @@ Here are a few empty pages connecting to the menu links to show where files can 
 * [menu 2](/menu2/)
 * [menu 3](/menu3/)
 
+
+
 ## References (not really)
 
 * \biblabel{noether15}{Noether (1915)} **Noether**,  Körper und Systeme rationaler Funktionen, 1915.
 * \biblabel{bezanson17}{Bezanson et al. (2017)} **Bezanson**, **Edelman**, **Karpinski** and **Shah**, [Julia: a fresh approach to numerical computing](https://julialang.org/research/julia-fresh-approach-BEKS.pdf), SIAM review 2017.
+
+
 
 ## Header and Footer
 
@@ -185,3 +205,5 @@ Last modified: {{ fill fd_mtime }}.
 This dictionary of variables is accessed locally by pages through `@def varname = value` and globally through the `config.md` page via the same syntax.
 
 There's a few other such functions of the form `{{fname p₁ p₂}}` as well as support for conditional blocks. If you wander through the `src/_html_parts/` folder and its content, you should be able to see those in action.
+
+-->
