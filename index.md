@@ -1,4 +1,4 @@
-@def title = "My Julia"
+@def title = "About"
 @def tags = ["syntax", "code"]
 
 # How to use Franklin
