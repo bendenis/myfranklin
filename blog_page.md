@@ -5,11 +5,32 @@ date = Date(2019, 3, 22)
 +++
 @def tags = ["syntax", "code"]
 
-# Working with code blocks
+
+# Blog
 
 \toc
 
-## Live evaluation of code blocks
+## Data Analysis
+
+* Hi
+* Hey
+* Hello
+
+## Linear Algebra
+
+* [QR Matrix Decomposition](https://bdshaff.github.io/blog/2021-04-02-qr-method-to-compute-eigenvalues/)
+
+## Deep Learning
+
+* hey
+
+## Marketing Analytics
+
+* [Introduction to Markov Chain Attribution](https://bdshaff.github.io/blog/2021-04-02-markov-chain-attribution/)
+
+
+
+# Live evaluation of code blocks
 
 If you would like to show code as well as what the code outputs, you only need to specify where the script corresponding to the code block will be saved.
 
@@ -62,7 +83,7 @@ Random.seed!(1) # hide
 \output{./code/ex3}
 
 
-## Including scripts
+# Including scripts
 
 Another approach is to include the content of a script that has already been executed.
 This can be an alternative to the description above if you'd like to only run the code once because it's particularly slow or because it's not Julia code.
