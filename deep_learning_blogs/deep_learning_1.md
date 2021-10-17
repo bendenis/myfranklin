@@ -2,7 +2,7 @@
 
 # Building a NN with Julia from the ground up
 
-
+\toc
 
 ## Initializing Parameters (Weights and Bias)
 
@@ -28,3 +28,11 @@ init_parameters = initialize_parameters_deep([3,8,4,2,1])
 ]
 ```
 \output{./deep_learning/initialize_parameters_deep_example.jl}
+
+## Forward Propagation Step
+
+## Activation Step
+
+## Combining Forward & Activation Steps
+
+## Compute Fitted Values (Forward Propagation)
