@@ -22,7 +22,7 @@ date = Date(2019, 3, 22)
 
 ## Deep Learning
 
-* hey
+* [Hand Building NN with Julia](/deep_learning_blogs/deep_learning_1/)
 
 ## Marketing Analytics
 
@@ -65,6 +65,12 @@ for i ∈ 1:5, j ∈ 1:5
     print(" ", rpad("*"^i,5), lpad("*"^(6-i),5), j==5 ? "\n" : " "^4)
 end
 ```
+
+```julia:./example
+@show [i^2 for i in 1:20]
+```
+
+\output{./example}
 
 which gives the (utterly useless):
 
