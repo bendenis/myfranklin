@@ -1,0 +1,8 @@
+Parameters: W2 of size (4, 8)
+Parameters: W3 of size (2, 4)
+Parameters: W4 of size (1, 2)
+Parameters: b3 of size (2, 1)
+Parameters: b4 of size (1, 1)
+Parameters: W1 of size (8, 3)
+Parameters: b2 of size (4, 1)
+Parameters: b1 of size (8, 1)

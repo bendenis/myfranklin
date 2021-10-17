@@ -1,0 +1,23 @@
+<!doctype html> <html lang=en > <meta charset=UTF-8 > <meta name=viewport  content="width=device-width, initial-scale=1"> <link rel=stylesheet  href="/myfranklin/libs/highlight/github.min.css"> <link rel=stylesheet  href="/myfranklin/css/franklin.css"> <link rel=stylesheet  href="/myfranklin/css/basic.css"> <link rel=icon  href="/myfranklin/assets/favicon.png"> <title>Building a NN with Julia from the ground up</title> <header> <div class=blog-name ><a href="/myfranklin/">Basic Template</a></div> <nav> <ul> <li><a href="/myfranklin/">About</a> <li><a href="/myfranklin/blog_page/">Blog</a> <!---<li><a href="/myfranklin/menu2/">More goodies</a> ---> <!---<li><a href="/myfranklin/menu3/">Tags</a> ---> </ul> <img src="/myfranklin/assets/hamburger.svg" id=menu-icon > </nav> </header> <div class=franklin-content ><h1 id=building_a_nn_with_julia_from_the_ground_up ><a href="#building_a_nn_with_julia_from_the_ground_up" class=header-anchor >Building a NN with Julia from the ground up</a></h1> <h2 id=initializing_parameters_weights_and_bias ><a href="#initializing_parameters_weights_and_bias" class=header-anchor >Initializing Parameters &#40;Weights and Bias&#41;</a></h2> <pre><code class=language-julia >function initialize_parameters_deep&#40;layer_dims&#41;
+    parameters &#61; Dict&#40;&#41;
+
+    for l in 1:&#40;length&#40;layer_dims&#41; - 1&#41;
+        parameters&#91;&quot;W&quot; * string&#40;l&#41;&#93; &#61; rand&#40;layer_dims&#91;l&#43;1&#93;, layer_dims&#91;l&#93;&#41; .* 0.01
+        parameters&#91;&quot;b&quot; * string&#40;l&#41;&#93; &#61; rand&#40;layer_dims&#91;l&#43;1&#93;, 1&#41; .* 0.01
+    end
+
+    return&#40;parameters&#41;
+end</code></pre> <pre><code class=language-julia >init_parameters &#61; initialize_parameters_deep&#40;&#91;3,8,4,2,1&#93;&#41;
+
+&#91;
+    println&#40;&quot;Parameters: &quot; * k * &quot; of size &quot; * string&#40;size&#40;init_parameters&#91;k&#93;&#41;&#41;&#41; 
+    for k in keys&#40;init_parameters&#41;
+&#93;</code></pre> <pre><code class="plaintext code-output">Parameters: W2 of size (4, 8)
+Parameters: W3 of size (2, 4)
+Parameters: W4 of size (1, 2)
+Parameters: b3 of size (2, 1)
+Parameters: b4 of size (1, 1)
+Parameters: W1 of size (8, 3)
+Parameters: b2 of size (4, 1)
+Parameters: b1 of size (8, 1)
+</code></pre> <div class=page-foot > <div class=copyright > &copy; Ben Denis Shaffer. Last modified: October 17, 2021. Website built with <a href="https://github.com/tlienart/Franklin.jl">Franklin.jl</a> and the <a href="https://julialang.org">Julia programming language</a>. </div> </div> </div> <script src="/myfranklin/libs/highlight/highlight.pack.js"></script> <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: ' '});</script>
