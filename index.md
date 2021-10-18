@@ -1,7 +1,22 @@
 @def title = "About"
 @def tags = ["syntax", "code"]
 
-# How to use Franklin
+# About
+
+> Once you stop learning, you start dying - Albert Einstein
+
+There has never been a better time in history for those who want to embrace lifelong learning.
+This blog is my open notebook where I share what I learn. If you are interested in, or work in the area of analytics and data science you might find something interesting here. At the very least I hope to promote lifelong learning, not by talking about it but by living it.
+
+## Professional Expereince
+
+* Predictive Analytics Analyst - TBWA (Nissan United)
+* Senior Analyst - Initiative
+
+## Education
+
+* MS Applied Statistics - University of Michigan
+* BA Economics, BA Mathematics - Boston University
 
 <!-- 
 

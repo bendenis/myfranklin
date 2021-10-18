@@ -10,15 +10,6 @@ date = Date(2019, 3, 22)
 
 \toc
 
-## Data Analysis
-
-* Hi
-* Hey
-* Hello
-
-## Linear Algebra
-
-* [QR Matrix Decomposition](https://bdshaff.github.io/blog/2021-04-02-qr-method-to-compute-eigenvalues/)
 
 ## Deep Learning
 
@@ -27,6 +18,13 @@ date = Date(2019, 3, 22)
 ## Marketing Analytics
 
 * [Introduction to Markov Chain Attribution](https://bdshaff.github.io/blog/2021-04-02-markov-chain-attribution/)
+
+## Data Analysis
+
+## Linear Algebra
+
+* [QR Matrix Decomposition](https://bdshaff.github.io/blog/2021-04-02-qr-method-to-compute-eigenvalues/)
+
 
 
 
