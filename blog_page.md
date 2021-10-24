@@ -8,9 +8,6 @@ date = Date(2019, 3, 22)
 
 # Blog
 
-\toc
-
-
 ## Deep Learning
 
 * [Hand Building NN with Julia](/deep_learning_blogs/deep_learning_1/)

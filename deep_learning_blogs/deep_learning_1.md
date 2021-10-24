@@ -2,6 +2,7 @@
 
 # Building a NN with Julia from the ground up
 
+
 ```julia:./deep_learning/setup
 using Distributions
 using RDatasets
@@ -20,6 +21,12 @@ println("")
 ```
 
 \output{./deep_learning/setup.jl}
+
+```julia:./deep_learning/data_plot
+plot(market_data.Today)
+```
+
+\output{./deep_learning/data_plot.jl}
 
 \toc
 
@@ -62,6 +69,8 @@ where l goes from $1 to L$ and L is the number of layers.
 
 Step 0 is to randomly initialize all of the parameter matrices $W_l$ and vecotrs $b_l$. This is where keeping track of the dimentions becomes extremly important. `initialize_parameters_deep` is the function that does this given an array of integers. The length of the array is the number of layers L and the integers are the number of neurons per layer.
 
+
+
 ```julia:./deep_learning/initialize_parameters_deep
 function initialize_parameters_deep(layer_dims)
     parameters = Dict()
@@ -88,6 +97,8 @@ init_parameters = initialize_parameters_deep(model_form)
 ```
 \output{./deep_learning/initialize_parameters_deep_example.jl}
 
+
+
 ### Forward Propagation Step
 
 ```julia:./deep_learning/linear_forward
@@ -111,6 +122,7 @@ Z, cache = linear_forward(A, W, b)
 
 \output{./deep_learning/linear_forward_example.jl}
 
+
 ### Activation Step
 
 ```julia:./deep_learning/activation_functions
@@ -133,6 +145,7 @@ next_A, cache_Z = relu(Z)
 
 \output{./deep_learning/activation_example.jl}
 
+
 ### Combining Forward & Activation Steps
 
 ```julia:./deep_learning/linear_activation_forward
@@ -150,6 +163,21 @@ function linear_activation_forward(Aprev, W, b, activation)
     return((A = A, cache = cache))
 end
 ```
+
+```julia:./deep_learning/linear_activation_forward_example
+
+A = X
+W = init_parameters["W1"]
+b = init_parameters["b1"]
+A, cache = linear_activation_forward(A, W, b, "relu")
+
+@show DataFrame(A, :auto)
+
+```
+
+\output{./deep_learning/linear_activation_forward_example.jl}
+
+
 
 ### Compute Fitted Values (Forward Propagation)
 
@@ -352,4 +380,5 @@ acc = mean(Y .== pred_nn_model(params[end], X))
 ```
 
 \output{./deep_learning/training.jl}
-
+<!--
+-->
