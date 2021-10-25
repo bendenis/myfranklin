@@ -22,11 +22,13 @@ println("")
 
 \output{./deep_learning/setup.jl}
 
-```julia:./deep_learning/data_plot
+```julia:market_data_today
+#hideall
 plot(market_data.Today)
+savefig(joinpath(@OUTPUT, "market_data_today.svg"))
 ```
 
-\output{./deep_learning/data_plot.jl}
+\fig{market_data_today}
 
 \toc
 
@@ -362,12 +364,12 @@ end
 Random.seed!(007)
 params = [initialize_parameters_deep([size(X)[1],5,5,1])]
 
-for i in 1:1000000
-    AP, caches = L_model_forward(X, params[i])
-    grads = L_model_backward(AP, Y, caches)
+for i in 1:2000000
+    AP, chs = L_model_forward(X, params[i])
+    grads = L_model_backward(AP, Y, chs)
     up = update_parameters(params[i], grads, 0.1)
     push!(params, up)
-    if i % 100000 == 0
+    if i % 200000 == 0
         println(compute_cost(AP, Y))
     end
 end
@@ -380,5 +382,7 @@ acc = mean(Y .== pred_nn_model(params[end], X))
 ```
 
 \output{./deep_learning/training.jl}
+
+
 <!--
 -->
