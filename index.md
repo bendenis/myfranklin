@@ -10,7 +10,8 @@ This blog is my open notebook where I share what I learn. If you are interested 
 
 ## Professional Expereince
 
-* Predictive Analytics Analyst - TBWA (Nissan United)
+* Manager, Analytics - Horizon Media
+* Predictive Analytics, Analyst - TBWA (Nissan United)
 * Senior Analyst - Initiative
 
 ## Education

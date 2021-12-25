@@ -1,5 +1,5 @@
 +++
-title = "Blog"
+title = "Data Science Blog"
 hascode = true
 date = Date(2019, 3, 22)
 +++
